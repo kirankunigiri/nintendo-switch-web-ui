@@ -1,4 +1,5 @@
 import { useBattery } from '@uidotdev/usehooks';
+import { useSnapshot } from 'valtio';
 
 import battery from '/battery.svg';
 import album from '/buttons/album.svg';
@@ -15,11 +16,13 @@ import profile2 from '/profile2.jpeg';
 import profile3 from '/profile3.jpeg';
 import wifi from '/wifi.svg';
 
+import state, { tiles } from '../state';
 import Carousel from './components/Carousel';
 import useDimensions from './useDimensions';
 import useLiveTime from './useLiveTime';
 
 function Console() {
+	const snap = useSnapshot(state);
 	const dimensions = useDimensions();
 
 	// Create profile pictures @ https://switchprofile.netlify.app/
@@ -76,7 +79,7 @@ function Console() {
 				{/* Game Title */}
 				<div className="ml-[6em] mt-[4em] text-[#2DB4EA]">
 					{/* Place image here */}
-					<div className="text-[2.7em]">Super Smash Bros. Ultimate</div>
+					<div className="h-[1.5em] text-[2.7em]">{snap.selectedTitle !== null ? tiles[snap.selectedTitle].title : ''}</div>
 				</div>
 
 				{/* Carousel */}
