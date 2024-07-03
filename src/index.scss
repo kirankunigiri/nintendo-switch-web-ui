@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'RodinProM';
+	src: url('/fonts/RodinBokutohProM.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	// Prevent text/img selection and dragging
+	user-select: none;
+	-webkit-user-drag: none;
+}
+
+body {
+	font-family: 'RodinProM';
+	// background-color: #2D2D2D;
+}
+
+@keyframes borderColorChange {
+	0% {
+		border-color: #62EFDF;
+	}
+	50% {
+		border-color: #1b98c6;
+	}
+	100% {
+		border-color: #62EFDF;
+	}
+}
+
+.animate-borderColor {
+	animation: borderColorChange .9s infinite;
+}
