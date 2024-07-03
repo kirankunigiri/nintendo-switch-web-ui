@@ -12,6 +12,7 @@ If you're on PC, try clicking on a game tile and using your arrow keys or scroll
 - Rotate your phone and double tab to go into full-screen mode
 - Fully touch-compatible gallery (swipe through it!)
 - Click on a game tile to select, and use arrow keys to move
+- Uses the actual time and battery percent (although the battery icon doesn't update)
 
 This was made in just a few hours, and has a few bugs. Check the todo list below to see what was left out.
 
@@ -19,8 +20,8 @@ This was made in just a few hours, and has a few bugs. Check the todo list below
 
 ### Todos
 These are some cool things I had planned, but I'm ending the practice project here for myself. Any contributions to improve this are welcome.
-- Use real time and battery
 - Update game name on selection
+- Update battery icon and color to match real status
 - Allow proper movement with arrow keys (it currently will not move the selected tile on the edges of the carousel)
 - Add Options and Start button on bottom right corner
 - Move images to github/imgur
